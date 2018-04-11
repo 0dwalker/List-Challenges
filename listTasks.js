@@ -12,28 +12,45 @@ let largest = list[0];
 function reverse(list){
 let array = [];
     for(let a = 0; a < list.length; a++){
-        array.push(list[a]);
+        array.push(list[list.length-a-1]);
     }
     return array;
 }
 
-//Task 3
-function cotains(list,e){
-
+function contains(list,e){
+       for(let a = 0; a < list.length; a++){
+            if(list[a] == e){
+                   return "Contains"
+            }
+       }
+       return "Does not Contain"
 }
 
-//Task 4
+
 function oddElements(list){
+      let array = [];
+      for(let a = 1; a < list.length; a = a + 2){
+            array.push(list[a]);
+      }
+      return array;
 }
 
 
-//Task 5
 function total(list){
-
-
+      let sum = 0;
+      for(let a = 0; a < list.length; a++){
+            sum = sum + list[a];
+      }
+      return sum;
 }
-//Task 6
+
 function isPalindrome(list){
+      
+      for(let a = 0; a < (list.length) * 0.5; a++){
+            if(list[a] == list[list.length - a + 1]){
+
+            }
+      }
 
 }
 
@@ -70,3 +87,6 @@ function fibonacci(){
 
 console.log(largest([3,2,4,5,6,7,8,9,10,1]));
 console.log(reverse([3,2,4,5,6,7,8,9,10,1]));
+console.log(contains([3,2,4,5,6,7,8,9,10,1], 6));
+console.log(oddElements([3,2,4,5,6,7,8,9,10,1]));
+console.log(total([3,2,4,5,6,7,8,9,10,1]));
