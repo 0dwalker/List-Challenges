@@ -45,23 +45,29 @@ function total(list){
 }
 
 function isPalindrome(list){
-      
-      for(let a = 0; a < (list.length) * 0.5; a++){
-            if(list[a] == list[list.length - a + 1]){
-
+      for(let a = 0; a < (list.length)/2; a++){
+            if(list[a] != list[list.length - a - 1]){
+                  return "is not a palindrome";
             }
       }
-
+      return "is palindrome";
 }
 
-//Task 7
-//Do second to last
 function recursiveTotal(list){
-
+      let total = 0;
+      for(let a = 0; a < listA.length; a++){
+      }
 }
-//Task 8
-function concatenate(listA, listB){
 
+function concatenate(listA, listB){
+      let array = [];
+      for(let a = 0; a < listA.length; a++){
+            array.push(listA[a]);
+      }
+      for(let a = 0; a < listA.length; a++){
+            array.push(listB[a]);
+      }
+      return array;
 }
 
 //Task 9
@@ -90,3 +96,5 @@ console.log(reverse([3,2,4,5,6,7,8,9,10,1]));
 console.log(contains([3,2,4,5,6,7,8,9,10,1], 6));
 console.log(oddElements([3,2,4,5,6,7,8,9,10,1]));
 console.log(total([3,2,4,5,6,7,8,9,10,1]));
+console.log(isPalindrome(['c','a','c']));
+console.log(concatenate(['a','b','c'],[1,2,3]));
