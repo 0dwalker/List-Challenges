@@ -54,9 +54,11 @@ function isPalindrome(list){
 }
 
 function recursiveTotal(list){
-      let total = 0;
-      for(let a = 0; a < listA.length; a++){
+
+      if(list.length < 1){
+            return list[0];
       }
+      return list[0]+recursiveTotal(list);
 }
 
 function concatenate(listA, listB){
@@ -64,16 +66,19 @@ function concatenate(listA, listB){
       for(let a = 0; a < listA.length; a++){
             array.push(listA[a]);
       }
-      for(let a = 0; a < listA.length; a++){
+      for(let a = 0; a < listB.length; a++){
             array.push(listB[a]);
       }
       return array;
 }
 
 //Task 9
-function weave(listA, listB){
+//function weave(listA, listB){
+//      for(let a = 0; a < listA.length; a++){
 
-}
+
+
+//}
 
 //Task 10
 //Attempt last
@@ -97,4 +102,4 @@ console.log(contains([3,2,4,5,6,7,8,9,10,1], 6));
 console.log(oddElements([3,2,4,5,6,7,8,9,10,1]));
 console.log(total([3,2,4,5,6,7,8,9,10,1]));
 console.log(isPalindrome(['c','a','c']));
-console.log(concatenate(['a','b','c'],[1,2,3]));
+console.log(concatenate(['a','b','c','d'],[1,2,3]));
